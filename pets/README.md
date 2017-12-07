@@ -11,7 +11,7 @@ https://github.com/flyrightsister/livecode_practice
 
 ## Database ERD
 
-![Database ERD](pets%20ERD?raw=true)
+![Database ERD](https://github.com/LearnersGuild/foundations-livecode-practice/blob/master/pets/pets%20ERD.png)
 
 ## Challenge 1: Pet Names per Species
 
