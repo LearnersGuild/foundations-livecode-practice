@@ -1,0 +1,15 @@
+html
+  head
+    title Pets
+    link(href='/css/main.css', rel='stylesheet')
+  body
+    h1 Pets
+    table
+      tr
+        th Pet name
+        th Pet species
+      each pet in pets
+        tr
+          td
+            input(class='pet-name', value=pet.name)
+          td= pet.species_name
