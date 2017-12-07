@@ -9,6 +9,10 @@ https://github.com/flyrightsister/livecode_practice
 3. `$ npm run db:create`
 4. `$ npm run db:seed`
 
+## Database ERD
+
+![Database ERD](pets%20ERD?raw=true)
+
 ## Challenge 1: Pet Names per Species
 
 Create a function in db.js that
