@@ -20,5 +20,7 @@ key "name".
 
 Example Promise resolution:
 
-```[ { name: "Astro" },
-  { name: "Sandy" } ]```
+```javascript
+[ { name: "Astro" },
+  { name: "Sandy" } ]
+```
