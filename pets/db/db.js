@@ -43,7 +43,24 @@ const getPetsOfSpecies = (speciesName) => {
     [speciesName])
 }
 
-getPetsOfSpecies('dinosaur')
+const addPet = (petName, speciesName) => {
+  return db.one(`
+    SELECT species_id
+    FROM species
+    WHERE species_name = $1`,
+    [speciesName])
+    .then((species) => {
+      return db.query(`
+       INSERT INTO pets
+        (name, species_id)
+       VALUES
+        ($1, $2)
+       RETURNING pet_id`,
+      [petName, species.species_id])
+    })
+}
+
+addPet('Snarfy', 'dog')
   .then(console.log)
   .catch(console.error)
 
