@@ -28,3 +28,18 @@ Example Promise resolution:
 [ { name: "Astro" },
   { name: "Sandy" } ]
 ```
+
+## Challenge 2: Add a pet
+
+Create a function in `db.js` that takes a pet name and a species name as parameters, adds the pet to the database with the provided species, and returns a Promise that resolves to the id of the new pet in the db. For the purposes of this challenge, you can assume: 
+
+  - The pet __does not__ exist in the database
+  - The species __does__ exist in the database
+
+Example result: 
+
+```javascript
+{
+  pet_id: 4
+}
+```
