@@ -43,3 +43,8 @@ Example result:
   pet_id: 4
 }
 ```
+
+- [ ] __5:__ The function takes two parameters: pet name and species name.
+- [ ] __10:__ The function has a query that looks up the id for the species.
+- [ ] __10:__ The function has another query that adds the pet using the species id.
+- [ ] __10:__ The function returns a Promise that resolves to the id of the new pet.
