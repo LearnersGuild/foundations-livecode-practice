@@ -33,6 +33,12 @@ const updatePetName = (petId, newName) =>
     })
     .catch(err => Object({ success: false, message: err.message }))
 
+/**
+ * Get pet names for a particular species name.
+ * 
+ * @param {string} speciesName - Name of the species for which to get pet names
+ * @returns {Promise} - resolves to an array of objects, each having the key 'name'
+ */
 const getPetsOfSpecies = (speciesName) => {
   return db.any(`
     SELECT p.name
@@ -43,6 +49,16 @@ const getPetsOfSpecies = (speciesName) => {
     [speciesName])
 }
 
+// getPetsOfSpecies('dog')
+//   .then(console.log)
+
+/**
+ * Add a pet to the database with the specified species.
+ * 
+ * @param {string} petName - Name of pet to add
+ * @param {string} speciesName - Species of pet to add
+ * @returns {Promise} - Returns a promise resolving to an object with the key 'pet_id'
+ */
 const addPet = (petName, speciesName) => {
   return db.one(`
     SELECT species_id
@@ -60,9 +76,9 @@ const addPet = (petName, speciesName) => {
     })
 }
 
-addPet('Snarfy', 'dog')
-  .then(console.log)
-  .catch(console.error)
+// addPet('Snarfy', 'dog')
+//   .then(console.log)
+//   .catch(console.error)
 
 module.exports = {
   db,
