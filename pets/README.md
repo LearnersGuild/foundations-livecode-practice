@@ -48,3 +48,13 @@ Example result:
 - [ ] __10:__ The function has a query that looks up the id for the species.
 - [ ] __10:__ The function has another query that adds the pet using the species id.
 - [ ] __10:__ The function returns a Promise that resolves to the id of the new pet.
+
+## Challenge 3: Display pets per species in Express
+
+Create a GET route for `/:speciesname/pets` that renders a page with pet names for a particular species. Use the function written in __Challenge 1__.
+
+- [ ] __5:__ Route uses GET
+- [ ] __10:__ Route uses function from `db.js` to get the necessary data
+- [ ] __10:__ Route renders `species.pug` OR `species.ejs` template
+- [ ] __10:__ Rendered page includes the name of the species in the <title> tag and a <h1> tag
+- [ ] __10:__ Rendered page includes the names of the pets for the species in question
