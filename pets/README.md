@@ -74,3 +74,18 @@ Example Promise resolution:
 [ { name: "Astro" },
   { name: "Sandy" } ]
 ```
+
+## Challenge 5: Associate a Pet with and Owner
+
+Create a function in `db.js` that takes a pet name and an owner name as parameters. The function associate the pet to the database with the provided owner and return a promise that resolves to an object containing the id of the new pet in the db.
+
+For the puprose of this challenge, you can assume:
+
+  - the pet __does__ exist in the db
+  - the owner __does__ exist in db
+
+Example Promise resolution: 
+```javascript
+{ id: 7 }
+```
+
