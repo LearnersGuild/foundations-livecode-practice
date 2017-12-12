@@ -65,7 +65,7 @@ Create a function in db.js that
 takes an owner name as a parameter
 and returns a Promise that resolves
 to an array of pet objects for that
-species. Each object should have the
+owner. Each object should have the
 key "name".
 
 Example Promise resolution:
