@@ -31,12 +31,12 @@ Example Promise resolution:
 
 ## Challenge 2: Add a pet
 
-Create a function in `db.js` that takes a pet name and a species name as parameters, adds the pet to the database with the provided species, and returns a Promise that resolves to the id of the new pet in the db. For the purposes of this challenge, you can assume: 
+Create a function in `db.js` that takes a pet name and a species name as parameters, adds the pet to the database with the provided species, and returns a Promise that resolves to the id of the new pet in the db. For the purposes of this challenge, you can assume:
 
   - The pet __does not__ exist in the database
   - The species __does__ exist in the database
 
-Example result: 
+Example result:
 
 ```javascript
 {
@@ -75,17 +75,15 @@ Example Promise resolution:
   { name: "Sandy" } ]
 ```
 
-## Challenge 5: Associate a Pet with and Owner
+## Challenge 5: Associate a Pet and Owner
 
-Create a function in `db.js` that takes a pet name and an owner name as parameters. The function associate the pet to the database with the provided owner and return a promise that resolves to an object containing the id of the new pet in the db.
+Create a function in `db.js` that takes a pet name and an owner name as parameters. The function should associate the pet with the provided owner and return a promise that resolves to an object representing the new petowners row in the db. The object should contain the keys 'id', 'pet_id', and 'owner_id'.
 
-For the puprose of this challenge, you can assume:
+For the puprose of this challenge, you can assume the pet and owner already exist in the database and have not yet been associated.
 
-  - the pet __does__ exist in the db
-  - the owner __does__ exist in db
-
-Example Promise resolution: 
+Example Promise resolution:
 ```javascript
-{ id: 7 }
+{ id: 7,
+  pet_id: 1,
+  owner_id: 3 }
 ```
-
