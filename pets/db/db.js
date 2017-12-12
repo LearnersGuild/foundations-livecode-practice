@@ -80,6 +80,29 @@ const addPet = (petName, speciesName) => {
 //   .then(console.log)
 //   .catch(console.error)
 
+/**
+ * Get pet names for a particular owner name.
+ * 
+ * @param {string} ownerName - Name of the owner for which to get pet names
+ * @returns {Promise} - resolves to an array of objects, each having the key 'name'
+ */
+const getPetsByOwner = (ownerName) => {
+  return db.any(`
+    SELECT p.name
+    FROM pets AS p
+      JOIN petowners as po
+        ON po.pet_id = p.pet_id
+      JOIN owners AS o
+        ON po.owner_id = o.owner_id
+    WHERE o.name = $1`,
+    [ownerName])
+}
+
+getPetsByOwner('Hermione Granger')
+  .then(console.log)
+  .catch(console.error)
+
+
 module.exports = {
   db,
   getPetsAndSpecies,

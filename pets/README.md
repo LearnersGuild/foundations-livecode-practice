@@ -58,3 +58,19 @@ Create a GET route for `/:speciesname/pets` that renders a page with pet names f
 - [ ] __10:__ Route renders `species.pug` OR `species.ejs` template
 - [ ] __10:__ Rendered page includes the name of the species in the `<title>` tag and a `<h1>` tag
 - [ ] __15:__ Rendered page includes the names of the pets for the species in question
+
+## Challenge 4: Pet Names per Owner
+
+Create a function in db.js that
+takes an owner name as a parameter
+and returns a Promise that resolves
+to an array of pet objects for that
+species. Each object should have the
+key "name".
+
+Example Promise resolution:
+
+```javascript
+[ { name: "Astro" },
+  { name: "Sandy" } ]
+```
