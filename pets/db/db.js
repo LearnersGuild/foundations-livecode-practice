@@ -35,7 +35,7 @@ const updatePetName = (petId, newName) =>
 
 /**
  * Get pet names for a particular species name.
- * 
+ *
  * @param {string} speciesName - Name of the species for which to get pet names
  * @returns {Promise} - resolves to an array of objects, each having the key 'name'
  */
@@ -54,7 +54,7 @@ const getPetsOfSpecies = (speciesName) => {
 
 /**
  * Add a pet to the database with the specified species.
- * 
+ *
  * @param {string} petName - Name of pet to add
  * @param {string} speciesName - Species of pet to add
  * @returns {Promise} - Returns a promise resolving to an object with the key 'pet_id'
@@ -82,7 +82,7 @@ const addPet = (petName, speciesName) => {
 
 /**
  * Get pet names for a particular owner name.
- * 
+ *
  * @param {string} ownerName - Name of the owner for which to get pet names
  * @returns {Promise} - resolves to an array of objects, each having the key 'name'
  */
@@ -98,9 +98,10 @@ const getPetsByOwner = (ownerName) => {
     [ownerName])
 }
 
-getPetsByOwner('Hermione Granger')
-  .then(console.log)
-  .catch(console.error)
+// getPetsByOwner('Hermione Granger')
+//   .then(console.log)
+//   .catch(console.error)
+
 
 
 module.exports = {
