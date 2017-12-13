@@ -98,11 +98,52 @@ const getPetsByOwner = (ownerName) => {
     [ownerName])
 }
 
-// getPetsByOwner('Hermione Granger')
+// getPetsByOwner('Bonnie Schulkin')
 //   .then(console.log)
 //   .catch(console.error)
 
+const addPetToOwner = (petName, ownerName) => {
+  let petId
+  let ownerId
+  return db.one(`
+    SELECT pet_id
+    FROM pets
+    WHERE name=$1`, [petName])
+    .then((pet) => {
+      petId = pet.pet_id
+      return db.one(`
+      SELECT owner_id
+      FROM owners
+      WHERE name=$1`, [ownerName])
+    })
+    .then((owner) => {
+      ownerId = owner.owner_id
+      return db.one(`
+        INSERT INTO petowners
+          (pet_id, owner_id)
+        VALUES
+          ($1, $2)
+        RETURNING *`,
+        [petId, ownerId])
+    })
+}
 
+addPetToOwner('Cisco', 'Bonnie Schulkin')
+  .then(console.log)
+  .catch(console.error)
+
+// const petAndOwner = (petName, ownerName) => {
+// db.any(
+//   `SELECT
+//     pets.pet_id,
+//     owners.owner_id
+//   FROM owners
+//     JOIN pets
+//       ON petowners.pet_id = pets.pet_id
+//     JOIN
+//       petowners ON owners.owner_id = petowners.owner_id
+//   WHERE petName, ownerName = $1, $2`, [petName, ownerName])
+//   .then (petowners => petowners.rows)
 
 module.exports = {
   db,

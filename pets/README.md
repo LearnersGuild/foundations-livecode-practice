@@ -77,7 +77,7 @@ Example Promise resolution:
 
 ## Challenge 5: Associate a Pet and Owner
 
-Create a function in `db.js` that takes a pet name and an owner name as parameters. The function should associate the pet with the provided owner and return a promise that resolves to an object representing the new petowners row in the db. The object should contain the keys 'id', 'pet_id', and 'owner_id'.
+Create a function in `db.js` that takes a pet name and an owner name as parameters. The function should associate the pet with the provided owner and return a promise that resolves to an object representing the new petowners row in the db. The object should contain the keys 'petowner_id', 'pet_id', and 'owner_id'.
 
 For the purpose of this challenge, you can assume the pet and owner already exist in the database and have not yet been associated.
 
