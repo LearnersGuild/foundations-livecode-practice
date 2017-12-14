@@ -87,3 +87,17 @@ Example Promise resolution:
   pet_id: 1,
   owner_id: 3 }
 ```
+
+## Challenge 6: List all owners who have zero pets
+
+Write a function in db.js that takes no arguments and returns a Promise that resolves to an array of objects. Each object should represent an owner and have one key: 'name'.
+
+- [ ] __5:__ The function takes no parameters.
+- [ ] __10:__ The function has a query that looks up pet owners who have no pets.
+- [ ] __10:__ The function returns a Promise that resolves to an array of the pet-less owners.
+
+Example Promise resolution:
+
+[
+  { name: 'Jay-Z' }
+]
