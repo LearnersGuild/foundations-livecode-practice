@@ -98,6 +98,8 @@ Write a function in db.js that takes no arguments and returns a Promise that res
 
 Example Promise resolution:
 
+```javascript
 [
   { name: 'Jay-Z' }
 ]
+```
