@@ -92,6 +92,12 @@ Example Promise resolution:
 
 Write a function in db.js that takes no arguments and returns a Promise that resolves to an array of objects. Each object should represent an owner and have one key: 'name'.
 
+__Note__: It would be a good idea to add an owner to the database at this point, and not add a pet for them, so that you know the query will return at least one result. You can add the owner with a direct SQL query in `psql` or Postico; no need to add a new owner as part of the function. 
+
+```sql
+INSERT INTO owners (name) VALUES ('Jay-Z')
+```
+
 - [ ] __5:__ The function takes no parameters.
 - [ ] __10:__ The function has a query that looks up pet owners who have no pets.
 - [ ] __10:__ The function returns a Promise that resolves to an array of the pet-less owners.
