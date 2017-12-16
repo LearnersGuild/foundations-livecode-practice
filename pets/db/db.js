@@ -128,9 +128,9 @@ const addPetToOwner = (petName, ownerName) => {
     })
 }
 
-addPetToOwner('Cisco', 'Bonnie Schulkin')
-  .then(console.log)
-  .catch(console.error)
+// addPetToOwner('Cisco', 'Bonnie Schulkin')
+//   .then(console.log)
+//   .catch(console.error)
 
 // const petAndOwner = (petName, ownerName) => {
 // db.any(
@@ -144,6 +144,22 @@ addPetToOwner('Cisco', 'Bonnie Schulkin')
 //       petowners ON owners.owner_id = petowners.owner_id
 //   WHERE petName, ownerName = $1, $2`, [petName, ownerName])
 //   .then (petowners => petowners.rows)
+
+const getNonPetOwners = () => {
+  const query = `
+  SELECT
+    o.name
+  FROM owners AS o
+    LEFT JOIN petowners AS po
+      ON o.owner_id = po.owner_id
+  WHERE po.petowner_id IS NULL`
+
+  return db.query(query)
+}
+
+getNonPetOwners()
+  .then(console.log)
+  .then(console.error)
 
 module.exports = {
   db,

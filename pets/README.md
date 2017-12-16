@@ -103,3 +103,11 @@ Example Promise resolution:
   { name: 'Jay-Z' }
 ]
 ```
+
+## Challenge 7: Species boxes grey on mouseover
+
+For the `/` route for this app, write JavaScript that turns the background of any cell containing the species name gray (#eee) on mouseover, and returns it to white on mouseout.
+
+- [ ] __10:__ Each species table cell has at least one event listener.
+- [ ] __10:__ The cell background turns gray (#eee) when the mouse is over the cell.
+- [ ] __10:__ The cell background returns to white when the mouse leaves the cell.
