@@ -121,3 +121,17 @@ You may use vanilla JS or jQuery.
 - [ ] __10:__ The cell background turns gray (#eee) when the mouse is over the cell.
 - [ ] __10:__ The cell background returns to white when the mouse leaves the cell.
 - [ ] __10:__ The JavaScript is contained in a separate file from the HTML.
+
+## Challenge 8: Change the title
+
+When you click the "Change Title" button, change the title (what's in the h1 tag) of the page from "Pets" to "Super Pets"
+
+- [ ] __10:__ The button has an event listener.
+- [ ] __10:__ When the button is clicked, the page header changes from "Pets" to "Super Pets".
+
+Extra credit
+Click the button again to change the title back to "Pets"
+
+- [ ] __10:__ The text of the button changes to "Change title back".
+- [ ] __10:__ The title changes back when clicked.
+- [ ] __10:__ The button text and functionality toggles back and forth every time you click button.
