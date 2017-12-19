@@ -138,12 +138,12 @@ Click the button again to change the title back to "Pets"
 
 ## Challenge 9: Create a GET route
 
-Create a GET route `/api/species/pets` that takes a query string parameter `speciesName` and displays all pets with that species using a pug or EJS template.
+Create a GET route `/api/species/pets` that takes a query string parameter `ownerName` and displays all pets with that owner using a pug or EJS template.
 
-Use the `getPetsOfSpecies` function in `db.js` to get the data from the db.
+Use the `getPetsByOwner` function in `db.js` to get the data from the db.
 
 - [ ] __5:__ The route uses GET.
-- [ ] __10:__ The route accesses the query string value for `speciesName`
-- [ ] __10:__ The route uses `getPetOfSpecies` to get the data.
+- [ ] __10:__ The route accesses the query string value for `ownerName`
+- [ ] __10:__ The route uses `getPetsByOwner` to get the data.
 - [ ] __10:__ The route renders a .pug or .ejs template.
-- [ ] __15:__ The route displays all pets for the provided species
+- [ ] __15:__ The route displays all pets for the provided owner
