@@ -135,3 +135,15 @@ Click the button again to change the title back to "Pets"
 - [ ] __10:__ The text of the button changes to "Change title back".
 - [ ] __10:__ The title changes back when clicked.
 - [ ] __10:__ The button text and functionality toggles back and forth every time you click button.
+
+## Challenge 9: Create a GET route
+
+Create a GET route `/api/species/pets` that takes a query string parameter `speciesName` and displays all pets with that species using a pug or EJS template.
+
+Use the `getPetsOfSpecies` function in `db.js` to get the data from the db.
+
+- [ ] __5:__ The route uses GET.
+- [ ] __10:__ The route accesses the query string value for `speciesName`
+- [ ] __10:__ The route uses `getPetOfSpecies` to get the data.
+- [ ] __10:__ The route renders a .pug or .ejs template.
+- [ ] __15:__ The route displays all pets for the provided species
