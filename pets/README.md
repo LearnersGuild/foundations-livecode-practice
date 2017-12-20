@@ -150,7 +150,7 @@ Use the `getPetsByOwner` function in `db.js` to get the data from the db.
 
 ## Challenge 10: POST route to add pet
 
-Create a POST route that takes a pet name (`petName`) and a species name (`speciesName`) as JSON data and adds the pet to the database. Use the `addPet` function from `db.js` to add the pet. The route should return JSON data returning the ID of the new pet with the key `petId`. The route should return a status of 404 and an error message if the pet was not added to the db.
+Create a POST route `/api/pets/add` that takes a pet name (`petName`) and a species name (`speciesName`) as JSON data and adds the pet to the database. Use the `addPet` function from `db.js` to add the pet. The route should return JSON data returning the ID of the new pet with the key `petId`. The route should return a status of 404 and an error message if the pet was not added to the db.
 
 For the purposes of this challenge assume the pet does not exist in the db and the species does.
 
