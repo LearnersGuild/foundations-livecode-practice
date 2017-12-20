@@ -173,6 +173,6 @@ Example response:
 
 - [ ] __5:__ The route uses POST.
 - [ ] __10:__ The route accesses the posted data
-- [ ] __10:__ The route uses `petId` to add the pet.
+- [ ] __10:__ The route uses the `addPet` function to add the pet.
 - [ ] __10:__ The route returns the petId in the case of success.
 - [ ] __10:__ The route returns 404 status and error message in the case of error.
