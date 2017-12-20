@@ -138,7 +138,7 @@ Click the button again to change the title back to "Pets"
 
 ## Challenge 9: Create a GET route
 
-Create a GET route `/api/species/pets` that takes a query string parameter `ownerName` and displays all pets with that owner using a pug or EJS template.
+Create a GET route `/api/owners/pets` that takes a query string parameter `ownerName` and displays all pets with that owner using a pug or EJS template.
 
 Use the `getPetsByOwner` function in `db.js` to get the data from the db.
 
@@ -147,3 +147,31 @@ Use the `getPetsByOwner` function in `db.js` to get the data from the db.
 - [ ] __10:__ The route uses `getPetsByOwner` to get the data.
 - [ ] __10:__ The route renders a .pug or .ejs template.
 - [ ] __15:__ The route displays all pets for the provided owner
+
+## Challenge #10: POST route to add pet
+
+Create a POST route that takes a pet name (`petName`) and a species name (`speciesName`) as JSON data and adds the pet to the database. Use the `addPet` function from `db.js` to add the pet. The route should return JSON data returning the ID of the new pet with the key `petId`. The route should return a status of 404 and an error message if the pet was not added to the db.
+
+For the purposes of this challenge assume the pet does not exist in the db and the species does.
+
+Example input data:
+
+```json
+{
+  "petName": "Fluffy",
+  "speciesName": "cat"
+}
+```
+
+Example response: 
+
+```json
+{
+  "petId": 12
+}
+
+- [ ] __5:__ The route uses POST.
+- [ ] __10:__ The route accesses the posted data
+- [ ] __10:__ The route uses `petId` to add the pet.
+- [ ] __10:__ The route returns the petId in the case of success.
+- [ ] __10:__ The route returns 404 status and error message in the case of error.
