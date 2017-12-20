@@ -148,7 +148,7 @@ Use the `getPetsByOwner` function in `db.js` to get the data from the db.
 - [ ] __10:__ The route renders a .pug or .ejs template.
 - [ ] __15:__ The route displays all pets for the provided owner
 
-## Challenge #10: POST route to add pet
+## Challenge 10: POST route to add pet
 
 Create a POST route that takes a pet name (`petName`) and a species name (`speciesName`) as JSON data and adds the pet to the database. Use the `addPet` function from `db.js` to add the pet. The route should return JSON data returning the ID of the new pet with the key `petId`. The route should return a status of 404 and an error message if the pet was not added to the db.
 
@@ -169,6 +169,7 @@ Example response:
 {
   "petId": 12
 }
+```
 
 - [ ] __5:__ The route uses POST.
 - [ ] __10:__ The route accesses the posted data
