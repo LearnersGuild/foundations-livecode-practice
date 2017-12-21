@@ -66,7 +66,7 @@ const addPet = (petName, speciesName) => {
     WHERE species_name = $1`,
     [speciesName])
     .then((species) => {
-      return db.query(`
+      return db.oneOrNone(`
        INSERT INTO pets
         (name, species_id)
        VALUES
@@ -166,4 +166,5 @@ module.exports = {
   getPetsAndSpecies,
   updatePetName,
   getPetsOfSpecies,
+  addPet,
 }
