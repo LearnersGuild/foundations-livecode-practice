@@ -1,6 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const { getPetsAndSpecies, addPet } = require('./db/db.js')
+const { getPetsAndSpecies, addPet, getPetsByOwner } = require('./db/db.js')
 
 const app = express()
 app.set('view engine', 'pug')
@@ -16,6 +16,18 @@ app.get('/', (req, res) => {
       )
     })
     .catch(console.error)
+})
+
+app.get('/api/owners/pets', (req, res) => {
+  const ownerName = req.query.ownerName
+
+  getPetsByOwner(ownerName)
+  .then((pets) => {
+    res.render('pets', {pets})
+  })
+  .catch((error) => {
+    res.json({'message': error.toString()})
+  })
 })
 
 app.post('/api/pets/add', (req, res) => {

@@ -167,4 +167,5 @@ module.exports = {
   updatePetName,
   getPetsOfSpecies,
   addPet,
+  getPetsByOwner
 }
