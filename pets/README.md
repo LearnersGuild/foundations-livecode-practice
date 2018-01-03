@@ -163,7 +163,7 @@ Example input data:
 }
 ```
 
-Example response: 
+Example response:
 
 ```json
 {
@@ -176,3 +176,17 @@ Example response:
 - [ ] __10:__ The route uses the `addPet` function to add the pet.
 - [ ] __10:__ The route returns the petId in the case of success.
 - [ ] __10:__ The route returns 404 status and error message in the case of error.
+
+## Challenge 11: Connect a form to our POST route
+
+Create a Pug or EJS view that displays a form that is connected to our POST `/api/pets/add` route. The form should have fields for a pet name (`petName`) and a species name (`speciesName`), and should have a submit button that triggers the form to submit the data to our POST route. You will need to update your body-parser middleware for this so that your form data can be read in your Express route.
+
+- [ ] __5:__ A .pug or .ejs file exists and is called `addPet`.
+- [ ] __5:__ The form has an action attribute set equal to `/api/pets/add`.
+- [ ] __5:__ The form has an method attribute set equal to `POST`.
+- [ ] __10:__ The form has a field with a name attribute set equal to `petName`.
+- [ ] __10:__ The form has a field with a name attribute set equal to `speciesName`.
+- [ ] __10:__ `bodyParser.urlencoded({extended: true})` exists in your `app.js` file.
+
+Extra Credit:
+- [ ] __5:__ The form fields uses placeholders to give users example inputs for the fields.
