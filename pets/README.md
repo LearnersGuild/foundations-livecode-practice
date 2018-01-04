@@ -177,6 +177,7 @@ Example response:
 - [ ] __10:__ The route returns the petId in the case of success.
 - [ ] __10:__ The route returns 404 status and error message in the case of error.
 
+
 ## Challenge 11: Connect a form to our POST route
 
 Create a Pug or EJS view that displays a form that is connected to our POST `/api/pets/add` route. The form should have fields for a pet name (`petName`) and a species name (`speciesName`), and should have a submit button that triggers the form to submit the data to our POST route. You will need to update your body-parser middleware for this so that your form data can be read in your Express route.
@@ -190,3 +191,13 @@ Create a Pug or EJS view that displays a form that is connected to our POST `/ap
 
 Extra Credit:
 - [ ] __5:__ The form fields uses placeholders to give users example inputs for the fields.
+
+## Challenge 12: GET route to view all pets for a particular species_id
+
+Create a GET route `/api/pets/:speciesName` that makes use of the url parameter `:speciesName` and renders a Pug or EJS view that displays all of the pets that are of a particular species. Make use of the `getPetsOfSpecies` function in `db.js`.
+
+- [ ] __5:__ The route uses GET.
+- [ ] __10:__ The route uses the url parameter `:speciesName`.
+- [ ] __10:__ The route uses `getPetsOfSpecies` to get the data.
+- [ ] __10:__ The route renders a .pug or .ejs view called `pets-by-species`.
+- [ ] __15:__ The view displays all pets that match a provided species.
